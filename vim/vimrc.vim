@@ -54,7 +54,7 @@ set mat=2
 syntax enable
 
 " Theme
-colorscheme monokai
+colorscheme molokai
 set t_Co=256
 let base16colorspace=256
 " Set background to adapt to dark mode
