@@ -7,7 +7,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "  can pass a path where Vundle should install plugins
 " call vundle#begin('~/some/path/here')
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
@@ -20,6 +19,13 @@ Plugin 'benmills/vimux'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-dispatch' 
+Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " Plugin 'Lokaltog/vim-powerline'
 call vundle#end()
 
