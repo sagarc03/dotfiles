@@ -5,3 +5,4 @@ curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim 
 cp vimrc ~/.vimrc
 vim +PluginInstall +qall
 cp ./tmux/conf ~/.tmux.conf
+cp ./bash/bashrc ~/.bashrc
