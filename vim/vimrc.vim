@@ -59,7 +59,7 @@ set t_Co=256
 let base16colorspace=256
 " Set background to adapt to dark mode
 set background=dark
-set number
+set number relativenumber 
 set autoindent
 set smartindent
 set laststatus=2
@@ -133,4 +133,3 @@ nnoremap <leader>bn :bn<cr>
 nnoremap <leader>ls :ls<cr>
 nnoremap <leader>b :b
 nnoremap <leader>bd :bd
-"
