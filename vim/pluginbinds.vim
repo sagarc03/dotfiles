@@ -3,11 +3,13 @@
 " NERD Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = [
+			\'\.pyc$', 
+			\'__pycache__'
+			\]
 let g:NERDTreeWinSize=35
 
 map <leader>nn :NERDTreeToggle<cr>
-map <leader>nf :NERDTreeFind<cr>
 
 let g:NERDTreeShowIgnoredStatus=1
 let NERDTreeWinSize=31
@@ -61,12 +63,20 @@ set t_Co=256
 map <leader>rp :call VimuxRunCommand("clear; python3  " . bufname("%"))<cr>
 set mouse-=a
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GitGutter
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set updatetime=100
 nnoremap <leader>tb :TagbarToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " jedi-vim
-let g:jedi#use_splits_not_buffers = "bottom"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:jedi#use_splits_not_buffers = "right"
 autocmd FileType python setlocal completeopt-=preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,18 +84,18 @@ autocmd FileType python setlocal completeopt-=preview
 " Fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>ga :Git add %:p<CR><CR>
+"nnoremap <leader>ga :Git add %:p<CR><CR>
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit -S -v -q<CR>
-nnoremap <leader>gt :Gcommit -S -v -q %:p<CR>
+"nnoremap <leader>gc :Gcommit -S -v -q<CR>
+"nnoremap <leader>gt :Gcommit -S -v -q %:p<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+"nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
 nnoremap <leader>gp :Ggrep<Space>
 nnoremap <leader>gm :Gmove<Space>
 nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
-nnoremap <leader>gps :Dispatch! git push<CR>
-nnoremap <leader>gpl :Dispatch! git pull<CR>
+"nnoremap <leader>gps :Dispatch! git push<CR>
+"nnoremap <leader>gpl :Dispatch! git pull<CR>
