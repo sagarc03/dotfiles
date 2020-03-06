@@ -30,6 +30,10 @@ install-zsh: # Install zsh
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 create-vimrc:
+	rm -rf ~/.vim
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	mkdir ~/.vim/colors
+	curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -o  ~/.vim/colors/molokai.vim
 	find vim/*.vim -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.vimrc
 	vim +PluginInstall +qall
 
