@@ -26,5 +26,5 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-"' Plugin 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
 call vundle#end()
