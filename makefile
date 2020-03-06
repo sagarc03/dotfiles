@@ -41,7 +41,7 @@ create-tmux-conf:
 	find tmux/*.conf -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.tmux.conf
 
 create-zshrc:
-	find zshrc/*.conf -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.zshrc
+	find zsh/*.conf -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.zshrc
 
 uninstall: # Uninstall everything"
 	echo "uninstalling y"
