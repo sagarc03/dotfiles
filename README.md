@@ -1,17 +1,9 @@
 # Dotfiles
 
-This repo contains installation scripts and setup instructions for zsh(OhMyZsh), vim and tumux. This is a primary repo where all the settings reside int.
-
-All three softwares can be isntalled using:
+This repo contains installation scripts and setup instructions for zsh(OhMyZsh), vim and tumux. This is a primary repo where all the settings reside in.
 
 ```
-make install-all
+make link
 ```
 
-After the installation is sucessful run:
-
-```
-make create-all
-```
-
-This will create all rc files and install all the plugins to all three are ready to use.
+Create symlink between file in the repo and files in the system.
