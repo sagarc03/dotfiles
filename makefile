@@ -1,6 +1,13 @@
 .PHONY: install uninstall help
 .DEFAULT_GOAL := help
 
+link: # symlink all files 
+	rm ~/.bashrc ~/.zshrc ~/.vimrc ~/.tmux.conf
+	ln -s $(PWD)/.zshrc ~/.zshrc 
+	ln -s $(PWD)/.vimrc ~/.vimrc
+	ln -s $(PWD)/.tmux.conf ~/.tmux.conf
+	ln -s $(PWD)/.bashrc ~/.bashrc
+
 install-all: # Install all softwares
 	$(MAKE) install-zsh
 	$(MAKE) install-vim
@@ -26,25 +33,11 @@ install-tmux: # Install Tmux
 		apt install tmux
 	fi
 
-install-zsh: # Install zsh
+install-zsh: # Install oh my zsh
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-create-vimrc:
-	rm -rf ~/.vim
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	mkdir ~/.vim/colors
-	curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -o  ~/.vim/colors/molokai.vim
-	find vim/*.vim -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.vimrc
+vim-setup:
 	vim +PluginInstall +qall
-
-create-tmux-conf:
-	find tmux/*.conf -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.tmux.conf
-
-create-zshrc:
-	find zsh/*.conf -maxdepth 1 -type f -exec  echo source $(PWD)/{} \; >> ~/.zshrc
-
-uninstall: # Uninstall everything"
-	echo "uninstalling y"
 
 help:
 	echo "Check makefile"
