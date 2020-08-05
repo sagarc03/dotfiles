@@ -107,3 +107,5 @@ ta () {
 }
 
 export MODE="DEV"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
